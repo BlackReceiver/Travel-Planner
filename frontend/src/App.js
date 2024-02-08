@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Unhome from './Unhome';
-import Register from '/.Register';
+import Register from './Register';
 
 function App() {
   return (
