@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Unhome from './Unhome';
 import Register from './Register';
-import AccountManagement from './AccountManagement';
+import ManageAccoount from './ManageAccount';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Unhome/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path='accountmanagement' element={<AccountManagement/>}></Route>
+        <Route path='/manageAccount' element={<ManageAccoount/>}></Route>
       </Routes>
     </BrowserRouter>
   );
