@@ -15,12 +15,11 @@ function ManageAccount() {
             .catch(err => console.log(err))
     }, [])
     return (
-        <div>
+        <div id='main'>
             <header>
                 <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                     <div className='container-fluid'>
-                        <img src={logo} alt='IATLogo' width='150' height='50' className=''/>
-
+                        <img src={logo} alt='IATLogo' width='150' height='50' className='ms-3'/>
                         <div className='collapse navbar-collapse' id='navbarNav'>
                             <ul className='navbar-nav'>
                                 <li className='nav-item'>
@@ -31,15 +30,14 @@ function ManageAccount() {
                                 </li>
                             </ul>
                         </div>
-
                         <div>
                             <Link className='text-dark' to="/viewprofile"><i class="bi bi-person-circle" id='profile'></i></Link>
                         </div>
                     </div>
                 </nav>
             </header>
-        
-            <div className='p-5' id='main'>
+
+            <div className='m-5'>
                 <div className='mb-5'>
                     <button className='btn rounded-pill border border-secondary' id='back'>
                         <i class="bi bi-arrow-left" id='arrow'></i> Back
@@ -48,8 +46,7 @@ function ManageAccount() {
                         <i class="bi bi-plus" id='plus'></i> Add New User
                     </button>
                 </div>
-
-                <Table className='table table-striped table-light table-bordered border-secondary'>
+                <Table className='table table-striped table-light table-bordered border-secondary mb-5'>
                     <thead>
                         <tr>
                             <th className='text-center'>Name</th>
@@ -58,7 +55,6 @@ function ManageAccount() {
                             <th className='text-center' colSpan={3}>Action</th>
                         </tr>
                     </thead>
-                    
                     <tbody>
                        {users.map((user, i) => (
                             <tr key={i}>
@@ -79,16 +75,8 @@ function ManageAccount() {
                     </tbody>
                 </Table>
             </div>
-            <footer className='footer'>
-                <div className='row'>
-                <div className='col-md'>
-                        <p className='text-center mb-3 mt-4'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
-                </div>
-                </div>    
-            </footer>
+            <p className='fixed-bottom bg-light mb-0 text-center color-dark p-2 fw-bold'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
         </div>
     );
 }
-    
-
 export default ManageAccount
