@@ -23,10 +23,10 @@ function ManageAccount() {
                         <div className='collapse navbar-collapse' id='navbarNav'>
                             <ul className='navbar-nav'>
                                 <li className='nav-item'>
-                                    <a className='nav-link active ms-5' style={{color: '#F171AB'}} href='/manageAccount'>Manage Accoounts</a>
+                                    <a className='nav-link active ms-5 fw-bolder' style={{color: '#F171AB'}} href='/manageAccount'>Manage Accoounts</a>
                                 </li>
                                 <li className='nav-item'>
-                                    <a className='nav-link ms-5' id='des' href='/manageDestinations'>Manage Destinations</a>
+                                    <a className='nav-link ms-5 fw-bolder' id='des' href='/manageDestinations'>Manage Destinations</a>
                                 </li>
                             </ul>
                         </div>
@@ -47,7 +47,7 @@ function ManageAccount() {
                     </button>
                 </div>
                 <Table className='table table-striped table-light table-bordered border-secondary mb-5'>
-                    <thead>
+                    <thead className='fw-bolder fs-6'>
                         <tr>
                             <th className='text-center'>Name</th>
                             <th className='text-center'>Email</th>
