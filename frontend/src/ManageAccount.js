@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Table} from 'react-bootstrap'
 import './ManageAccount.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// import 'bootstrap-icons/font/bootstrap-icons.css';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import logo from './Images/IATLogo.png'

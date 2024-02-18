@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Unhome/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path='/manageAccount' element={<ManageAccoount/>}></Route>
+        <Route path='/manageaccount' element={<ManageAccoount/>}></Route>
         <Route path='/addnewdestination' element={<AddNewDestination/>}></Route>
       </Routes>
     </BrowserRouter>
