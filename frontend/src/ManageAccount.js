@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Table} from 'react-bootstrap'
 import './ManageAccount.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import logo from './Images/IATLogo.png'
@@ -42,9 +42,9 @@ function ManageAccount() {
                     <button className='btn rounded-pill border border-secondary' id='back'>
                         <i class="bi bi-arrow-left" id='arrow'></i> Back
                     </button>
-                    <button className='btn float-end rounded-3 border border-secondary' id='add'>
-                        <i class="bi bi-plus" id='plus'></i> Add New User
-                    </button>
+                    <Link className='btn float-end rounded-3 border border-secondary' id='add' to='/addnewuser'>
+                    <i class="bi bi-plus" id='plus'></i> AddNewUser
+                    </Link>
                 </div>
                 <Table className='table table-striped table-light table-bordered border-secondary mb-5'>
                     <thead className='fw-bolder fs-6'>
