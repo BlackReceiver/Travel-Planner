@@ -16,9 +16,10 @@ function ManageAccount() {
     }, [])
     return (
         <div id='main'>
-            <header>
+            <header className='sticky-top'>
                 <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                     <div className='container-fluid'>
+                    
                         <img src={logo} alt='IATLogo' width='150' height='50' className='ms-3'/>
                         <div className='collapse navbar-collapse' id='navbarNav'>
                             <ul className='navbar-nav'>
@@ -37,16 +38,16 @@ function ManageAccount() {
                 </nav>
             </header>
 
-            <div className='m-5'>
-                <div className='mb-5'>
-                    <button className='btn rounded-pill border border-secondary' id='back'>
+            <div className='table-resposive pt-4 pe-5 ps-5'>
+                <div className='mb-4'>
+                    <button className='btn rounded-pill border border-secondary ' id='back'>
                         <i class="bi bi-arrow-left" id='arrow'></i> Back
                     </button>
-                    <Link className='btn float-end rounded-3 border border-secondary' id='add' to='/addnewuser'>
+                    <Link className='btn float-end rounded-3 border border-secondary align-middle' id='add' to='/addnewuser'>
                     <i class="bi bi-plus" id='plus'></i> AddNewUser
                     </Link>
                 </div>
-                <Table className='table table-striped table-light table-bordered border-secondary mb-5'>
+                <Table className='table table-striped table-light table-bordered border-secondary'>
                     <thead className='fw-bolder fs-6'>
                         <tr>
                             <th className='text-center'>Name</th>
@@ -75,7 +76,7 @@ function ManageAccount() {
                     </tbody>
                 </Table>
             </div>
-            <p className='fixed-bottom bg-light mb-0 text-center color-dark p-2 fw-bold'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
+            <p className='sticky-bottom text-center fw-bold m-0'>copyright &copy; 2024,Intitute of Advanced Technologies | All Rights Reserved.</p>
         </div>
     );
 }

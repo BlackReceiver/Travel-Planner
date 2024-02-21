@@ -22,6 +22,15 @@ app.get("/", (req, res) => {
     })
 })
 
+app.post('/addnewuser', (req, res) => {
+    const sql = "insert into user (user_name, email, password, role, gender) values (?)";
+    const values = [...Object.values(req.body)];
+    db.query(sql,[values],(err,data) => {
+        if (err) return res.json("Error");
+        return res.json({data})
+    });
+});
+
 app.listen(8081, () => {
     console.log("Listening");
 })
