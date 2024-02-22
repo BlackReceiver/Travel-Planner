@@ -15,7 +15,7 @@ function ManageAccount() {
             .catch(err => console.log(err))
     }, [])
     return (
-        <div id='main'>
+        <div id='container'>
             <header className='sticky-top'>
                 <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                     <div className='container-fluid'>
@@ -38,7 +38,7 @@ function ManageAccount() {
                 </nav>
             </header>
 
-            <div className='table-resposive pt-4 pe-5 ps-5'>
+            <div className='table-resposive pt-5 pe-5 ps-5'>
                 <div className='mb-4'>
                     <button className='btn rounded-pill border border-secondary ' id='back'>
                         <i class="bi bi-arrow-left" id='arrow'></i> Back
@@ -57,7 +57,7 @@ function ManageAccount() {
                         </tr>
                     </thead>
                     <tbody>
-                       {users.map((user, i) => (
+                       {Object.values(users).map((user, i) => (
                             <tr key={i}>
                                 <td className='text-center'>{user.user_name}</td>
                                 <td className='text-center'>{user.email}</td>
@@ -66,7 +66,7 @@ function ManageAccount() {
                                     <button className='btn btn-primary'><i class="bi bi-eye" id='view'></i></button>
                                 </td>
                                 <td className='text-center'>
-                                    <button className='btn btn-success ms-2'><i class="bi bi-person-fill-gear" id='edit'></i></button>
+                                    <Link className='btn btn-success ms-2' to={`/edituser/${user.user_id}`}><i class="bi bi-person-fill-gear" id='edit'></i></Link>
                                 </td>
                                 <td className='text-center'>
                                     <button  className='btn btn-danger ms-2'><i class="bi bi-trash" id='dele'></i></button>
@@ -76,7 +76,7 @@ function ManageAccount() {
                     </tbody>
                 </Table>
             </div>
-            <p className='sticky-bottom text-center fw-bold m-0'>copyright &copy; 2024,Intitute of Advanced Technologies | All Rights Reserved.</p>
+            <p className='bottom text-center fw-bold m-0'>copyright &copy; 2024,Intitute of Advanced Technologies | All Rights Reserved.</p>
         </div>
     );
 }

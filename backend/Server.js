@@ -31,6 +31,17 @@ app.post('/addnewuser', (req, res) => {
     });
 });
 
+app.put('/edituser/:id', (req, res) => {
+    const sql = "UPDATE user SET user_name=?, email=?, role=? WHERE user_id=?";
+    const id = req.params.id;
+    const values = [req.body.name, req.body.email, req.body.role]
+    console.log(req.body.name)
+    db.query(sql, [...values, id], (err, data) => {
+        if (err) return res.json("Error");
+        return res.json(data);
+    });
+});
+
 app.listen(8081, () => {
     console.log("Listening");
 })

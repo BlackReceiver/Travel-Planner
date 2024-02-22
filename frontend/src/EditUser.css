@@ -1,14 +1,13 @@
-#background_image {
+#main {
     background-image: url(./Images/bg.png);
-    background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
-#right {
+label {
     float: left;
-    width: 100px;
+    width: 110px;
     text-align: right;
-    padding-right: 10px;
+    padding: 10px;
 }
-

@@ -7,6 +7,7 @@ import ManageAccoount from './ManageAccount';
 import AddNewDestination from './AddNewDestination';
 import Login from './Login';
 import AddNewUser from './AddNewUser';
+import EditUser from './EditUser';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/addnewdestination' element={<AddNewDestination/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/addnewuser' element={<AddNewUser/>}></Route>
+        <Route path='/edituser/:id' element={<EditUser/>}></Route>
       </Routes>
     </BrowserRouter>
   );
