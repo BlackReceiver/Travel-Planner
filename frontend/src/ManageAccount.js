@@ -16,7 +16,7 @@ function ManageAccount() {
     }, [])
     
     const handleDelete = async (id) => {
-        alert("Are you sure?");
+        if(window.confirm("⚠️ Are you sure you want to delete this user?")){
         try{
             await
             axios.delete('http://localhost:8081/manageaccount/' + id)
@@ -24,6 +24,7 @@ function ManageAccount() {
         }catch(err){
             console.log(err);
         }
+    }
     }
     return (
         <div id='container'>
