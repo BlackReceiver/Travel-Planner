@@ -42,6 +42,15 @@ app.put('/edituser/:id', (req, res) => {
     });
 });
 
+app.delete('/manageaccount/:id', (req, res) => {
+    const sql = "delete from user where user_id=?";
+    const id = req.params.id;
+    db.query(sql, [id], (err, data) => {
+        if (err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
 app.listen(8081, () => {
     console.log("Listening");
 })

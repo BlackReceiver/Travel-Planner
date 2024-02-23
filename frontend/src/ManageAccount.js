@@ -14,6 +14,17 @@ function ManageAccount() {
             .then(res => setUsers(res.data))
             .catch(err => console.log(err))
     }, [])
+    
+    const handleDelete = async (id) => {
+        alert("Are you sure?");
+        try{
+            await
+            axios.delete('http://localhost:8081/manageaccount/' + id)
+            window.location.reload()
+        }catch(err){
+            console.log(err);
+        }
+    }
     return (
         <div id='container'>
             <header className='sticky-top'>
@@ -69,7 +80,7 @@ function ManageAccount() {
                                     <Link className='btn btn-success ms-2' to={`/edituser/${user.user_id}`}><i class="bi bi-person-fill-gear" id='edit'></i></Link>
                                 </td>
                                 <td className='text-center'>
-                                    <button  className='btn btn-danger ms-2'><i class="bi bi-trash" id='dele'></i></button>
+                                    <button  className='btn btn-danger ms-2'><i class="bi bi-trash" id='dele' onClick={e => handleDelete(user.user_id)}></i></button>
                                 </td>                              
                             </tr>
                         ))}
