@@ -26,11 +26,11 @@ function AddNewUser() {
     navigate('/manageaccount');
   }
   return (
-    <div className='d-flex justify-content-center align-items-center vh-100 ' id='background_image'>
+    <div className='d-flex justify-content-center align-items-center' id='background_image'>
       <div className='border border-secondary rounded'>
         <form className='p-4' onSubmit={handleSubmit}>
           <div className='input-group mb-3' onChange={e => setName(e.target.value)}>
-            <label htmlFor='user' id='right' className='fw-bold'>User Name:</label>
+            <label htmlFor='user' id='right' className='fw-bold'>Name:</label>
             <input type='text' placeholder='User Name' className='form-control rounded'></input>
           </div>
 
@@ -48,16 +48,14 @@ function AddNewUser() {
             <label htmlFor='role' id='right' className='fw-bold'>Role:</label>
             <select name='role' id='role' className='form-select form-select-sm rounded'>
               <option >SELECT A ROLE</option>
-              <option value='Admin'>Admin</option>
-              <option value='User'>User</option>
+              <option value='Admin'className='fw-bold'>Admin</option>
+              <option value='User' className='fw-bold'>User</option>
             </select>
           </div>
 
-          <div className=' mb-3 text-center' onChange={e => setGender(e.target.value)}>
-            <input type='radio' name='gender' className='me-2' value='Male'></input>
-            <label htmlFor='male' className='me-2 fw-bold'>Male</label>
-            <input type='radio' name='gender' className='me-2 fw-bold' value='Female'></input>
-            <label htmlFor='female' className='me-2 fw-bold'>Female</label>
+          <div className='mb-3 text-center fw-bold' onChange={e => setGender(e.target.value)}>
+            <input type='radio' name='gender' value='Male' className='me-2'></input>Male
+            <input type='radio' name='gender' value='Female' className='me-2 ms-2'></input>Female
           </div>
 
           <div>

@@ -6,9 +6,9 @@
 }
 
 #right {
-    float: left;
     width: 100px;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 5px;
+    clear: both;
 }
 
