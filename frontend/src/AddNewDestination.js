@@ -7,7 +7,6 @@ import './AddNewDestination.css';
 function AddNewDestination() {
   return (
     <div id='body'>
-        <header>
             <Navbar bg="dark" variant="dark" expand="md" sticky='top'>
                 <Navbar.Brand href="#home"><img src={Logo} alt='Logo' className='img-fluid' style={{ maxWidth: '150px', height: 'auto' }}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,11 +17,6 @@ function AddNewDestination() {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </header>
-
-        <div>
-            <h1>Not ok</h1>
-        </div>
     </div>
   )
 }

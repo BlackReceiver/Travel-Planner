@@ -14,11 +14,24 @@ function ManageAccount() {
             .then(res => setUsers(res.data))
             .catch(err => console.log(err))
     }, [])
+    
+    const handleDelete = async (id) => {
+        if(window.confirm("⚠️ Are you sure you want to delete this user?")){
+        try{
+            await
+            axios.delete('http://localhost:8081/manageaccount/' + id)
+            window.location.reload()
+        }catch(err){
+            console.log(err);
+        }
+    }
+    }
     return (
-        <div id='main'>
-            <header>
+        <div id='container'>
+            <header className='sticky-top'>
                 <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                     <div className='container-fluid'>
+                    
                         <img src={logo} alt='IATLogo' width='150' height='50' className='ms-3'/>
                         <div className='collapse navbar-collapse' id='navbarNav'>
                             <ul className='navbar-nav'>
@@ -37,16 +50,16 @@ function ManageAccount() {
                 </nav>
             </header>
 
-            <div className='m-5'>
-                <div className='mb-5'>
-                    <button className='btn rounded-pill border border-secondary' id='back'>
+            <div className='table-resposive pt-5 pe-5 ps-5'>
+                <div className='mb-4'>
+                    <button className='btn rounded-pill border border-secondary ' id='back'>
                         <i class="bi bi-arrow-left" id='arrow'></i> Back
                     </button>
-                    <button className='btn float-end rounded-3 border border-secondary' id='add'>
-                        <i class="bi bi-plus" id='plus'></i> Add New User
-                    </button>
+                    <Link className='btn float-end rounded-3 border border-secondary align-middle' id='add' to='/addnewuser'>
+                    <i class="bi bi-plus" id='plus'></i> AddNewUser
+                    </Link>
                 </div>
-                <Table className='table table-striped table-light table-bordered border-secondary mb-5'>
+                <Table className='table table-striped table-light table-bordered border-secondary'>
                     <thead className='fw-bolder fs-6'>
                         <tr>
                             <th className='text-center'>Name</th>
@@ -56,7 +69,7 @@ function ManageAccount() {
                         </tr>
                     </thead>
                     <tbody>
-                       {users.map((user, i) => (
+                       {Object.values(users).map((user, i) => (
                             <tr key={i}>
                                 <td className='text-center'>{user.user_name}</td>
                                 <td className='text-center'>{user.email}</td>
@@ -65,17 +78,17 @@ function ManageAccount() {
                                     <button className='btn btn-primary'><i class="bi bi-eye" id='view'></i></button>
                                 </td>
                                 <td className='text-center'>
-                                    <button className='btn btn-success ms-2'><i class="bi bi-person-fill-gear" id='edit'></i></button>
+                                    <Link className='btn btn-success ms-2' to={`/edituser/${user.user_id}`}><i class="bi bi-person-fill-gear" id='edit'></i></Link>
                                 </td>
                                 <td className='text-center'>
-                                    <button  className='btn btn-danger ms-2'><i class="bi bi-trash" id='dele'></i></button>
+                                    <button  className='btn btn-danger ms-2'><i class="bi bi-trash" id='dele' onClick={e => handleDelete(user.user_id)}></i></button>
                                 </td>                              
                             </tr>
                         ))}
                     </tbody>
                 </Table>
             </div>
-            <p className='fixed-bottom bg-light mb-0 text-center color-dark p-2 fw-bold'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
+            <p className='bottom text-center fw-bold m-0'>copyright &copy; 2024,Intitute of Advanced Technologies | All Rights Reserved.</p>
         </div>
     );
 }
