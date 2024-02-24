@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./Images/bg.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: 100vw 100vh;
+}
+
+form {
+  
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center; /* Center form content */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+ button{
+  position: absolute;
+  left:100%;
+  border-radius: 10px;
+  width: 20em;
+  } 
