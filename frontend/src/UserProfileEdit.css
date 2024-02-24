@@ -20,7 +20,8 @@
  position: absolute;
  top:13%;
  left: 46%;
- font-size: 8em;
+ font-size: 8em; 
+ 
 }
 
 #des:hover {
@@ -53,24 +54,26 @@
 
 .wrapper{
   width: 450px;
-  height: 140px;
+  height: 135px;
   margin: auto;
-  
-  border: 2px solid navy;
   margin-top: 200px;
-  background: lightgoldenrodyellow;
-  border-radius: 5px;
-}
+  
 
-.name{
-  margin-top: 15px;
-  margin-left: 20px;
+  
+  
+  border-radius: 5px;
+} 
+
+label {
+  float: left;
+  width: 110px;
+  text-align: right;
+  padding: 10px;
 }
-.address{
-  margin-top:15px;
-  margin-left:20px;
-}
-.gender{
-  margin-top:15px;
-  margin-left:20px;
+button{
+  position: absolute;
+  bottom:20%;
+  left: 44%;
+ 
+
 }

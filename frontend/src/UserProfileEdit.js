@@ -42,25 +42,32 @@ function UserProfileEdit() {
                 <Link className='text-black' to="/viewprofile"><i class="bi bi-person-circle" id='profile'></i></Link>
             </div>
             
-                    
-            <div class="wrapper"> 
-     <div class="name">
-            <label>User Name:</label>
-    </div>
-        <div class="address">
-            <label>Email:</label>
-        </div>
+            <div  className='wrapper'>            
+            <div className='border border-secondary rounded'>
+            <form className>
+                <div className='input-group mb-3'>
+                    <label htmlFor='user' className='fw-bold'>User Name:</label>
+                </div>
 
-        <div class="gender">
-            <label>Gender:</label>
-        </div>
-        
-    
- </div> 
-   
-   <div>
-      <button>Edit your Profile Info <i></i></button>
-   </div>
+                <div className='input-group mb-3' >
+                    <label htmlFor='email' className='fw-bold'>Email:</label>
+                    
+                </div>
+
+                <div className='input-group mb-3' >
+                    <label htmlFor='role' className='fw-bold'>Gender: </label>
+                    
+                </div>
+
+                
+            </form>
+           
+            </div>
+
+            </div>
+            <button type='submit'  className='btn rounded border border-secondary float-end fw-bold' style={{background: 'rgb(200, 209, 218)'}}  >
+                        Edit your Profile Info
+                    </button>
             
             
             <p className='fixed-bottom bg-light mb-0 text-center color-dark p-2 fw-bold'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
