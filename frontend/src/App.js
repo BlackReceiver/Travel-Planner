@@ -6,6 +6,7 @@ import Register from './Register';
 import ManageAccoount from './ManageAccount';
 import AddNewDestination from './AddNewDestination';
 import Login from './Login';
+import UserProfileEdit from './UserProfileEdit';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/manageAccount' element={<ManageAccoount/>}></Route>
         <Route path='/addnewdestination' element={<AddNewDestination/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/userprofileedit' element={<UserProfileEdit/>}></Route>
       </Routes>
     </BrowserRouter>
   );
